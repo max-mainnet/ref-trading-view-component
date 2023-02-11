@@ -1,0 +1,109 @@
+{
+  "version": "0.2.3",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "ref-orderly-trading-view-test",
+  "author": "Max",
+  "module": "dist/ref-orderly-trading-view.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/ref-orderly-trading-view.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/ref-orderly-trading-view.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
+  },
+  "dependencies": {
+    "@near-wallet-selector/core": "^7.0.0",
+    "@near-wallet-selector/modal-ui": "^7.0.0",
+    "@near-wallet-selector/my-near-wallet": "^7.0.0",
+    "@near-wallet-selector/near-wallet": "^7.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/bn.js": "^5.1.1",
+    "@types/jest": "^28.1.8",
+    "@types/node": "^18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "autoprefixer": "^10.4.13",
+    "big.js": "^6.1.1",
+    "bs58": "^5.0.0",
+    "elliptic": "^6.5.4",
+    "keccak256": "^1.0.6",
+    "mathjs": "^9.3.0",
+    "moment": "^2.29.4",
+    "near-api-js": "0.44.2",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^9.1.0",
+    "postcss-preset-env": "^7.8.3",
+    "react": "^18.2.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
+    "react-micro-modal": "^2.0.2",
+    "react-modal": "^3.13.1",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^9.1.1",
+    "react-tooltip": "^4.2.17",
+    "react-use-websocket": "4.0.0",
+    "socket.io-client": "^4.5.4"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.1.2",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "autoprefixer": "^9",
+    "husky": "^8.0.3",
+    "identity-obj-proxy": "^3.0.0",
+    "postcss": "^8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-static-files": "^0.2.0",
+    "size-limit": "^8.1.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  }
+}
